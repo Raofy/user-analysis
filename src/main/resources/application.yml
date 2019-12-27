@@ -1,0 +1,32 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 10000
+    min-spare-threads: 30
+  port: 6700
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 50
+      max-wait: 30000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      max-pool-prepared-statement-per-connection-size: 20
+      connection-init-sqls: "SET names utf8mb4;"
+
+    url: jdbc:mysql://rm-bp1iml36y247329g2lo.mysql.rds.aliyuncs.com:3306/sprider?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=true
+    username: sprider
+    password: j6ixcvDn!M@s2ofOg9&VcX^^c7luxP
